@@ -11,19 +11,7 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
-      routes:
-        - id: service1
-          uri: http://127.0.0.1:8080
-          predicates:
-            - Path=/first/**
-          filters:
-            - RewritePath=/first/(?<segment>.*), /first-service-web-1.0-SNAPSHOT/api/${segment}
-        - id: service2
-          uri: http://127.0.0.1:8090
-          predicates:
-            - Path=/second/**
-          filters:
-            - RewritePath=/second/(?<segment>.*), /v1/oscar/${segment}
+
 
 eureka:
   client:
