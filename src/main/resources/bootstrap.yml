@@ -6,11 +6,16 @@ spring:
       discovery:
         enabled: true
         service-id: config-server
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-          lowerCaseServiceId: true
+
+zuul:
+  routes:
+    first-service:
+      path: /first-service/**
+      url: http://localhost:8090/v1/oscar/
+    second-service:
+      path: /second-service/**
+      url: http://127.0.0.1:8080/first-service-web-1.0-SNAPSHOT/api/
+
 eureka:
   client:
     service-url:
