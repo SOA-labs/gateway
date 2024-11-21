@@ -6,6 +6,11 @@ spring:
       discovery:
         enabled: true
         service-id: config-server
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
 
 eureka:
   client:
