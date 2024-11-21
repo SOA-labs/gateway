@@ -64,6 +64,11 @@
             <version>7.0.21</version>
             <scope>provided</scope>
         </dependency>
+        <!--        load balancer-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
